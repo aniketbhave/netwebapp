@@ -1,2 +1,7 @@
 git credentialsId: 'firsttestID', url: 'https://github.com/aniketbhave/netwebapp.git'
-echo 'hi from github'
+agent any
+node('built-in') {
+    // some block
+  echo 'hi from github'
+}
+
