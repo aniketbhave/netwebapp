@@ -1,7 +1,21 @@
-git credentialsId: 'firsttestID', url: 'https://github.com/aniketbhave/netwebapp.git'
-agent any
-node('built-in') {
-    // some block
-  echo 'hi from github'
-}
+pipeline {
+    agent any
 
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
