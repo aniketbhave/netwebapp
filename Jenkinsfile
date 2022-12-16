@@ -3,8 +3,12 @@ pipeline {
 
     stages {
         stage('Build') {
+            when {
+                branch "dev"
+            }
             steps {
                 echo 'Building..'
+                enco 'Hi! from DEV'
             }
         }
         stage('Test') {
