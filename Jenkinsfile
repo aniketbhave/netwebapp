@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             when {
@@ -8,7 +7,7 @@ pipeline {
             }
             steps {
                 echo 'Building..'
-                enco 'Hi! from DEV'
+                echo 'Hi! from DEV'
             }
         }
         stage('Test') {
