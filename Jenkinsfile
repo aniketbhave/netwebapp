@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'busybox' } }
+    agent { kubernetes { image 'busybox' } }
     stages {
         stage('Build') {
             when {
