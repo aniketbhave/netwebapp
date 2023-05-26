@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo 'Hi! from DEV'
-                cleanWs()
+                // cleanWs()
                 bat "dotnet restore ${workspace}\\WebApplication1.sln"
                 bat "msbuild.exe ${workspace}\\WebApplication1.sln /nologo /nr:false  /p:platform=\"x64\" /p:configuration=\"release\" /t:clean;restore;rebuild"
             }
