@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'maven' }
+    agent { label 'windows' }
     stages {
         stage('Build') {
             when {
@@ -11,7 +11,8 @@ pipeline {
                 // cleanWs()
                 // bat "dotnet restore ${workspace}\\WebApplication1.sln"
                 // bat "msbuild.exe ${workspace}\\WebApplication1.sln /nologo /nr:false  /p:platform=\"x64\" /p:configuration=\"release\" /t:clean;restore;rebuild"
-                dotnetBuild()
+                //dotnetBuild()
+                dotnet restore ${workspace}\\WebApplication1.sln
             }
         }
         stage('Test') {
