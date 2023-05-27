@@ -10,7 +10,7 @@ pipeline {
                 echo 'Hi! from DEV'
                 // cleanWs()
                 bat "dotnet restore ${workspace}\\WebApplication1.sln"
-                bat "dotnet build ${workspace}\\WebApplication1.sln /nologo /nr:false  /p:platform=\"x64\" /p:configuration=\"release\" /t:clean;restore;rebuild"
+                bat "dotnet publish ${workspace}\\WebApplication1.sln -c Release --nologo --no-restore -o ../Publish"
             }
         }
         stage('Test') {
