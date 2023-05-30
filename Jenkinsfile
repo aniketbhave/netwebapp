@@ -26,4 +26,9 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            echo 'inside post success !!'
+        }
+    }
 }
