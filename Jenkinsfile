@@ -12,7 +12,7 @@ pipeline {
                 // cleanWs()
                 bat "dotnet restore ${workspace}\\WebApplication1.sln"
                 bat "dotnet publish ${workspace}\\WebApplication1.sln -c Release --nologo --no-restore -o ../Publish"
-                helloWorldSimple( 'Aniket', 'Sunday')
+                helloWorldSimple( 'Aniket Bhave', 'Sunday')
             }
         }
         stage('Test') {
